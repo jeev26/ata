@@ -202,25 +202,25 @@ export const ports: Port[] = [
   },
 
   {
-  slug: "king-fahd-industrial-port",
-  name: "King Fahd Industrial Port",
-  location: "Jubail, Saudi Arabia",
-  description:
-    "One of the world's largest industrial ports, supporting petrochemical, oil, gas, and bulk cargo operations in the Arabian Gulf.",
-  image: "/images/ports/jubailindustryport.jpg",
-  services: [
-    "Ship Chandling",
-    "Marine Equipment Supply",
-    "Safety Equipment Delivery",
-    "Industrial Procurement",
-  ],
-  highlights: [
-    "One of the Largest Industrial Ports Globally",
-    "Petrochemical & Oil Industry Hub",
-    "24/7 Vessel Support",
-    "Bulk, Tanker & Offshore Vessel Operations",
-  ],
-},
+    slug: "king-fahd-industrial-port",
+    name: "King Fahd Industrial Port",
+    location: "Jubail, Saudi Arabia",
+    description:
+      "One of the world's largest industrial ports, supporting petrochemical, oil, gas, and bulk cargo operations in the Arabian Gulf.",
+    image: "/images/ports/jubailindustryport.jpg",
+    services: [
+      "Ship Chandling",
+      "Marine Equipment Supply",
+      "Safety Equipment Delivery",
+      "Industrial Procurement",
+    ],
+    highlights: [
+      "One of the Largest Industrial Ports Globally",
+      "Petrochemical & Oil Industry Hub",
+      "24/7 Vessel Support",
+      "Bulk, Tanker & Offshore Vessel Operations",
+    ],
+  },
 
   {
     slug: "Ras-Tanura-Aramco - Ras-Tanura",
@@ -244,40 +244,59 @@ export const ports: Port[] = [
   },
 
   {
-  slug: "ras-al-khair-port",
-  name: "Ras Al-Khair Port",
-  location: "Ras Al-Khair, Saudi Arabia",
-  description:
-    "A strategic industrial and mining port on the Arabian Gulf, supporting mining exports, industrial projects, offshore operations, and vessel services in the Ras Al-Khair Industrial City.",
-  image: "/images/ports/rasalkhairport.jpg",
-  services: [
-    "Ship Chandling",
-    "Marine Equipment Supply",
-    "Safety Equipment Delivery",
-    "Technical Procurement",
-  ],
-  highlights: [
-    "Major Mining & Industrial Port",
-    "Supports Ma'aden Industrial Operations",
-    "Offshore & Project Cargo Handling",
-    "24/7 Vessel Supply Support",
-  ],
-},
+    slug: "ras-al-khair-port",
+    name: "Ras Al-Khair Port",
+    location: "Ras Al-Khair, Saudi Arabia",
+    description:
+      "A strategic industrial and mining port on the Arabian Gulf, supporting mining exports, industrial projects, offshore operations, and vessel services in the Ras Al-Khair Industrial City.",
+    image: "/images/ports/rasalkhairport.jpg",
+    services: [
+      "Ship Chandling",
+      "Marine Equipment Supply",
+      "Safety Equipment Delivery",
+      "Technical Procurement",
+    ],
+    highlights: [
+      "Major Mining & Industrial Port",
+      "Supports Ma'aden Industrial Operations",
+      "Offshore & Project Cargo Handling",
+      "24/7 Vessel Supply Support",
+    ],
+  },
 
 ];
 
 export type Client = {
   name: string;
   logo: string;
+  description: string;
 };
 
 export const clients: Client[] = [
-  { name: "zamil Offshore", logo: "/images/clients/zamil.png" },
-  { name: "Rawabi Vallianz Offshore Services", logo: "/images/clients/rawabi.jpg" },
-  { name: "GAC", logo: "/images/clients/gac.png" },
-  { name: "Seacor Marine", logo: "/images/clients/seacor.webp" },
-  { name: "zaki", logo: "/images/clients/zaki.png" },
-  { name: "Astro", logo: "/images/clients/astro.jpg" },
+  {
+    name: "zamil Offshore", logo: "/images/clients/zamil.png", description:
+      "Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels.Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels.",
+  },
+  {
+    name: "Rawabi Vallianz Offshore Services", logo: "/images/clients/rawabi.jpg", description:
+      "Providing comprehensive offshore services for marine operations and industrial projects.",
+  },
+  {
+    name: "GAC", logo: "/images/clients/gac.png", description:
+      "Offering integrated marine solutions for the global shipping and offshore industries.",
+  },
+  {
+    name: "Seacor Marine", logo: "/images/clients/seacor.webp", description:
+      "Delivering innovative marine equipment and services for various maritime applications.",
+  },
+  {
+    name: "zaki", logo: "/images/clients/zaki.png", description:
+      "Supplying high-quality marine products and equipment for diverse industrial needs.",
+  },
+  {
+    name: "Astro", logo: "/images/clients/astro.jpg", description:
+      "Providing reliable marine services and equipment for offshore and coastal operations.",
+  }
 ];
 
 export const navLinks = [
