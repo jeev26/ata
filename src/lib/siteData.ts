@@ -1,3 +1,5 @@
+
+// SERVICE DATA
 export const SITE = {
   name: "Astra Titan Arabia Marine Services",
   shortName: "Astra Titan Arabia",
@@ -13,6 +15,8 @@ export const SITE = {
   tagline: "Reliable Marine & Industrial Supply Across Saudi Arabia",
 };
 
+
+// SERVICE DATA
 export type Service = {
   slug: string;
   title: string;
@@ -147,7 +151,7 @@ export const services: Service[] = [
 ];
 
 
-
+// PORTS DATA
 export type Port = {
   slug: string;
   name: string;
@@ -266,6 +270,8 @@ export const ports: Port[] = [
 
 ];
 
+
+// CLIENT DATA
 export type Client = {
   name: string;
   logo: string;
@@ -299,6 +305,7 @@ export const clients: Client[] = [
   }
 ];
 
+// NAVIGATION LINKS
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },

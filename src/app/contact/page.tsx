@@ -18,11 +18,11 @@ export default function ContactPage() {
       {/* Hero Banner */}
       <HeroBanner
         backgroundImage="/images/hero/contact.jpg"
-        
+
         title={
           <>
             <span className="block text-7xl font-black sm:text-1xl lg:text-9xl">
-              
+
             </span>
 
             <span className="block text-5xl uppercase">
@@ -33,7 +33,7 @@ export default function ContactPage() {
       />
 
 
-
+      {/* Contact Information */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>

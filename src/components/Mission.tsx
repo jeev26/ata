@@ -4,6 +4,8 @@ import logo from "../../public/logo.svg"
 
 export default function Mission() {
     return (
+
+        // Mission component
         <section className="relative overflow-hidden bg-gradient-to-b from-[white] to-[#013D69] py-24">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -100,5 +102,6 @@ export default function Mission() {
 
             <div className="absolute bottom-32 right-1/4 w-20 h-20 rounded-full border border-white/10"></div>
         </section>
+
     )
 }

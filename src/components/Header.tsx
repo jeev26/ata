@@ -7,6 +7,8 @@ import GroupButton from "./UI/Button/GroupButton";
 
 export default function Header() {
   return (
+
+    // Header Section
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 p-5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -71,5 +73,7 @@ export default function Header() {
         </div>
       </div>
     </header>
+
+    
   );
 }

@@ -9,6 +9,8 @@ export default function Service() {
   const [active, setActive] = useState(0);
 
   return (
+
+    // Service Component
     <section className="bg-[#013D69] py-24">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">

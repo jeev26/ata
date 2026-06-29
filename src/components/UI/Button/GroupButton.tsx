@@ -8,6 +8,8 @@ export default function GroupButton({
   whatsapp,
 }: HeaderActionsProps) {
   return (
+
+    // Group Button Section
     <div className="flex items-center gap-3">
       <a
         href={whatsapp}
@@ -25,5 +27,6 @@ export default function GroupButton({
         Request a Quote
       </Link>
     </div>
+    
   );
 }
