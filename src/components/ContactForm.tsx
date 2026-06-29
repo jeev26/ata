@@ -45,7 +45,7 @@ export default function ContactForm() {
           name="name"
           required
           className="w-full rounded-md border border-slate-300 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
-          placeholder="John Doe"
+          placeholder="Enter your Name"
         />
       </div>
 
