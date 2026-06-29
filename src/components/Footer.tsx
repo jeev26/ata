@@ -3,6 +3,8 @@ import { navLinks, services, SITE } from "@/lib/siteData";
 
 export default function Footer() {
   return (
+
+    // Footer Section
     <footer className="bg-[#013D69] text-slate-300">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
@@ -59,5 +61,7 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} Astra Titan Arabia Marine Services. All rights reserved.
       </div>
     </footer>
+
+    
   );
 }

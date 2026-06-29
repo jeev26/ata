@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Service Grid Card Component  
 export default function ServiceGridCard({
   service,
 }: {

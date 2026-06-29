@@ -5,6 +5,8 @@ import Image from "next/image";
 
 export default function Client() {
   return (
+
+    // Client Section
     <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
       <SectionHeading
         title="Trusted by Industry Leaders"
@@ -54,6 +56,7 @@ export default function Client() {
           ))}
         </div>
       </div>
+      
     </section>
   )
 }

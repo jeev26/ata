@@ -14,7 +14,7 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     try {
-      // TODO: Replace with your form backend endpoint (e.g. Formspree, Resend, or a Next.js API route)
+      // CONTACT API call
       const response = await fetch("/api/contact", {
         method: "POST",
         body: JSON.stringify({
@@ -34,6 +34,8 @@ export default function ContactForm() {
   }
 
   return (
+
+    // form with name, email, message fields and a submit button
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
@@ -96,5 +98,6 @@ export default function ContactForm() {
         </p>
       )}
     </form>
+
   );
 }
