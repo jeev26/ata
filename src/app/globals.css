@@ -47,7 +47,7 @@ body {
   }
 }
 
-/* .marquee {
+.marquee {
   animation: marquee 25s linear infinite;
 }
 
@@ -65,4 +65,4 @@ body {
 .marquee-fade {
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-} */
+}

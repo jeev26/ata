@@ -1,34 +1,3 @@
-// import { NextRequest, NextResponse } from "next/server";
-
-// // TODO: Wire this up to a real email service (e.g. Resend, SendGrid) or a
-// // form backend (e.g. Formspree). Currently logs the submission server-side.
-// export async function POST(request: NextRequest) {
-//   try {
-//     const { name, email, message } = await request.json();
-
-//     if (!email || !message) {
-//       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
-//     }
-
-//     console.log("New contact form submission:", { name, email, message });
-
-//     // Example with Resend (uncomment and configure once you have an API key):
-//     //
-//     // const resend = new Resend(process.env.RESEND_API_KEY);
-//     // await resend.emails.send({
-//     //   from: "Website <noreply@atamarinesa.com>",
-//     //   to: "sales@atamarinesa.com",
-//     //   subject: `New inquiry from ${name || "website visitor"}`,
-//     //   text: `From: ${name} <${email}>\n\n${message}`,
-//     // });
-
-//     return NextResponse.json({ success: true });
-//   } catch {
-//     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
-//   }
-// }
-
-
 
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";

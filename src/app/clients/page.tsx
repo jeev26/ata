@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { clients, SITE } from "@/lib/siteData";
-import SectionHeading from "@/components/SectionHeading";
+import ClientsPageShowcase from "./component/clientshowcase";
+
 
 export const metadata: Metadata = {
   title: "Our Clients",
@@ -49,40 +49,7 @@ export default function ClientsPage() {
       </section>
 
       {/* Clients Grid */}
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <SectionHeading
-          title="Our Partner Network"
-          description="Organizations across offshore support, shipping, and marine logistics that rely on us for fast, dependable supply."
-        />
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              tabIndex={0}
-              className="group relative isolate flex h-44 flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-lg focus:-translate-y-1 focus:border-primary focus:shadow-lg focus:outline-none"
-            >
-              {/* Logo */}
-              <div className="relative z-0 h-16 w-full transition-opacity duration-300 group-hover:opacity-0 group-focus:opacity-0">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  fill
-                  className="object-contain grayscale transition-all duration-300 group-hover:grayscale-0"
-                  sizes="200px"
-                />
-              </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-1 rounded-xl bg-primary px-4 text-center text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus:opacity-100 pointer-events-none">
-                <p className="text-sm font-semibold leading-tight">
-                  {client.name}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ClientsPageShowcase />
 
       {/* CTA */}
       <section className="bg-slate-50">
@@ -94,11 +61,10 @@ export default function ClientsPage() {
             Looking for a dependable marine and industrial supply partner in
             Saudi Arabia? Let&apos;s talk about your operational needs.
           </p>
-
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center rounded-md bg-[#013D69] px-6 py-3 text-sm font-semibold text-white hover:bg-[#013d69]/90 transition-colors"
             >
               Request a Quote
             </Link>
@@ -107,7 +73,7 @@ export default function ClientsPage() {
               href={SITE.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-secondary px-6 py-3 text-sm font-semibold text-white hover:bg-secondary-dark transition-colors"
+              className="inline-flex items-center rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 transition-colors"
             >
               Chat on WhatsApp
             </a>
