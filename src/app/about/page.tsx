@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/siteData";
 import SectionHeading from "@/components/SectionHeading";
-
+import HeroBanner from "@/components/UI/HeroBanner/HeroBanner";
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -14,40 +14,24 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden text-white">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/ports/img4.jpg')",
-          }}
-        />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-[#013D69]/40" />
-
-        {/* Decorative Blur */}
-        <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" />
-
-        {/* Content */}
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
-          <h1 className="leading-none">
-            <span className="block text-7xl font-black text-white sm:text-8xl lg:text-9xl">
+    {/* Hero Banner */}
+      <HeroBanner
+        backgroundImage="/images/ports/img4.jpg"
+        description="Supporting marine, offshore, and industrial operations across Saudi Arabia with dependable supply solutions."
+        title={
+          <>
+            <span className="block text-7xl font-black sm:text-8xl lg:text-9xl">
               BEYOND
             </span>
 
-            <span className="block text-5xl  text-white uppercase mb-4">
+            <span className="block text-5xl uppercase">
               ports.limits.
             </span>
-          </h1>
+          </>
+        }
+      />
 
-          <p className="mt-6 max-w-2xl text-lg text-slate-200">
-            Supporting marine, offshore, and industrial operations across Saudi Arabia with dependable supply solutions.
-          </p>
-        </div>
-      </section>
-
+      {/* About Content */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <div className="space-y-6">
@@ -83,6 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Stats Section */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <SectionHeading
@@ -92,7 +77,8 @@ export default function AboutPage() {
           />
         </div>
       </section>
-
+      
+      
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid gap-8 sm:grid-cols-3 text-center">
           <div className="rounded-xl border border-slate-200 p-8">

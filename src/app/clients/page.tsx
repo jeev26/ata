@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { clients, SITE } from "@/lib/siteData";
 import ClientsPageShowcase from "./component/clientshowcase";
-
+import HeroBanner from "@/components/UI/HeroBanner/HeroBanner";
+import CallToAction from "@/components/UI/CTA/CallToActionProps";
 
 export const metadata: Metadata = {
   title: "Our Clients",
@@ -14,21 +15,23 @@ export const metadata: Metadata = {
 export default function ClientsPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-2">
-            Our Network
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold max-w-2xl">
-            Trusted by Leading Marine Companies
-          </h1>
-          <p className="mt-4 max-w-xl text-slate-300 leading-7">
-            A glimpse at some of the customers who&apos;ve trusted Astra Titan
-            Arabia for marine and industrial supply across Saudi Arabia.
-          </p>
-        </div>
-      </section>
+      {/* Hero Banner */}
+      <HeroBanner
+        backgroundImage="/images/hero/client3.jpg"
+        description="A glimpse at some of the customers who&apos;ve trusted Astra Titan
+            Arabia for marine and industrial supply across Saudi Arabia."
+        title={
+          <>
+            <span className="block text-7xl font-black sm:text-8xl lg:text-9xl">
+              NETWORK
+            </span>
+
+            <span className="block text-5xl uppercase">
+              Trusted by Leading Marine Companies
+            </span>
+          </>
+        }
+      />
 
       {/* Stats */}
       <section className="border-b border-slate-200 bg-white">
@@ -52,34 +55,14 @@ export default function ClientsPage() {
       <ClientsPageShowcase />
 
       {/* CTA */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="heading-secondary mb-4">
-            Become Our Next Trusted Partner
-          </h2>
-          <p className="text-body mb-8 max-w-xl mx-auto">
-            Looking for a dependable marine and industrial supply partner in
-            Saudi Arabia? Let&apos;s talk about your operational needs.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-md bg-[#013D69] px-6 py-3 text-sm font-semibold text-white hover:bg-[#013d69]/90 transition-colors"
-            >
-              Request a Quote
-            </Link>
-
-            <a
-              href={SITE.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 transition-colors"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+      <CallToAction
+        title="Become Our Next Trusted Partner"
+        description="Looking for a dependable marine and industrial supply partner in Saudi Arabia? Let&apos;s talk about your operational needs."
+        primaryButtonText="Request a Quote"
+        primaryButtonHref="/contact"
+        secondaryButtonText="Chat on WhatsApp"
+        secondaryButtonHref={SITE.whatsapp}
+      />
     </>
   );
 }

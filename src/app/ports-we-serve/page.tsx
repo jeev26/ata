@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ports, SITE } from "@/lib/siteData";
 import SectionHeading from "@/components/SectionHeading";
+import HeroBanner from "@/components/UI/HeroBanner/HeroBanner";
+import CallToAction from "@/components/UI/CTA/CallToActionProps";
 
 export const metadata: Metadata = {
   title: "Ports We Serve",
@@ -14,20 +16,26 @@ export const metadata: Metadata = {
 export default function PortsPage() {
   return (
     <>
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <p className="text-sm font-semibold uppercase tracking-wide text-blue-300 mb-2">
-            Coverage
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold max-w-2xl">Ports We Serve</h1>
-          <p className="mt-4 max-w-xl text-slate-300 leading-7">
-            Located along Saudi Arabia&apos;s East coast, we provide fast,
+      {/* Hero Banner */}
+      <HeroBanner
+        backgroundImage="/images/hero/port1.jpg"
+        description="Located along Saudi Arabia&apos;s East coast, we provide fast,
             reliable marine supply and delivery to vessels at the region&apos;s
-            major ports.
-          </p>
-        </div>
-      </section>
+            major ports."
+        title={
+          <>
+            <span className="block text-7xl font-black sm:text-1xl lg:text-9xl">
+              WE SERVE
+            </span>
 
+            <span className="block text-5xl uppercase">
+              COVERAGE ACROSS THE EASTERN PROVINCE
+            </span>
+          </>
+        }
+      />
+
+      {/* Ports Grid */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <SectionHeading
           title="Key Ports Along the Eastern Province"
@@ -54,31 +62,15 @@ export default function PortsPage() {
         </div>
       </section>
 
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h2 className="text-3xl font-bold mb-4">Need Delivery to Another Port?</h2>
-          <p className="text-slate-300 mb-8 max-w-xl mx-auto leading-7">
-            Get in touch &mdash; our procurement team coordinates delivery
-            across the Eastern Province and beyond.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Request a Quote
-            </Link>
-            <a
-              href={SITE.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-green-600 px-6 py-3 text-sm font-semibold hover:bg-green-700 transition-colors"
-            >
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section */}
+      <CallToAction
+        title="Need Delivery to Another Port?"
+        description="Get in touch &mdash; our procurement team coordinates delivery across the Eastern Province and beyond."
+        primaryButtonText="Request a Quote"
+        primaryButtonHref="/contact"
+        secondaryButtonText="Chat on WhatsApp"
+        secondaryButtonHref={SITE.whatsapp}
+      />
     </>
   );
 }
