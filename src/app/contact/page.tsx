@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/siteData";
 import ContactForm from "@/components/ContactForm";
 import HeroBanner from "@/components/UI/HeroBanner/HeroBanner";
+import SocialLinks from "@/components/UI/Button/SocialLink";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -79,7 +80,7 @@ export default function ContactPage() {
                   href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-700 font-medium hover:underline"
+                  className="text-[#013D69] font-medium hover:underline"
                 >
                   {SITE.phone}
                 </a>
@@ -89,10 +90,20 @@ export default function ContactPage() {
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500 mb-1">
                   Email
                 </h3>
-                <a href={`mailto:${SITE.email}`} className="text-blue-700 font-medium hover:underline">
+                <a href={`mailto:${SITE.email}`} className="text-[#013D69] font-medium hover:underline">
                   {SITE.email}
                 </a>
               </div>
+
+              <div>
+                <SocialLinks
+                  linkedin={SITE.linkedin}
+                  facebook={SITE.facebook}
+                  iconColor="text-[#013D69]"
+                  bgColor="bg-slate-100"
+                />
+              </div>
+
             </div>
 
             <div className="mt-8 rounded-xl overflow-hidden border border-slate-200 h-64">

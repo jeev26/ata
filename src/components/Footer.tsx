@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navLinks, services, SITE } from "@/lib/siteData";
+import SocialLinks from "@/components/UI/Button/SocialLink";
 
 export default function Footer() {
   return (
@@ -52,6 +53,12 @@ export default function Footer() {
               <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">
                 {SITE.email}
               </a>
+            </li>
+            <li>
+              <SocialLinks
+                linkedin={SITE.linkedin}
+                facebook={SITE.facebook}
+              />
             </li>
           </ul>
         </div>
