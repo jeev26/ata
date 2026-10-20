@@ -3,7 +3,9 @@ import { clients } from "@/lib/siteData";
 import Image from "next/image";
 
 
-export default function Client() {
+export default async function Client() {
+await new Promise((resolve) => setTimeout(resolve, 5000));
+  
   return (
 
     // Client Section
