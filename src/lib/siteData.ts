@@ -298,7 +298,7 @@ export const clients: Client[] = [
       "SEACOR Marine is an international provider of marine transportation and offshore support services for the energy industry. It operates a diverse fleet of offshore support vessels serving oil and gas operations and offshore wind projects. Its services include crew transportation, platform supply, accommodation, and maintenance support, with a strong focus on safety and operational reliability.",
   },
   {
-    name: "Zaki Al Zayer", logo: "/images/clients/zaki.png", description:
+    name: "Zaki Al Zayer", logo: "/images/clients/Zaki.png", description:
       "Zaki Al Zayer Marine Services is a marine and offshore services provider with a longstanding presence in the maritime industry. Its capabilities include vessel ownership and chartering, offshore support, vessel management, and marine engineering. The company supports offshore and oil industry operations through a diverse fleet of marine vessels and specialized services.",
   },
   {

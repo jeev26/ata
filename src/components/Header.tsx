@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { navLinks, SITE } from "@/lib/siteData";
 import logo from "../../public/logo.svg"
@@ -5,7 +8,31 @@ import Image from "next/image";
 import GroupButton from "./UI/Button/GroupButton";
 
 
+
 export default function Header() {
+
+  const menuRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    function handleOutsideClick(event: MouseEvent | TouchEvent) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        menuRef.current.open = false;
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, []);
+
+
   return (
 
     // Header Section
@@ -35,12 +62,12 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-           {/* group component   */}
+            {/* group component   */}
             <GroupButton whatsapp={SITE.whatsapp} />
           </div>
 
           {/* Mobile nav - simple links, no JS toggle to keep this server component */}
-          <details className="md:hidden relative">
+          <details ref={menuRef} className="md:hidden relative">
             <summary className="list-none cursor-pointer rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700">
               Menu
             </summary>
@@ -74,6 +101,6 @@ export default function Header() {
       </div>
     </header>
 
-    
+
   );
 }
