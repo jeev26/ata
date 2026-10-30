@@ -283,27 +283,27 @@ export type Client = {
 export const clients: Client[] = [
   {
     name: "zamil Offshore", logo: "/images/clients/zamil.png", description:
-      "Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels. Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels.Delivering safety equipment, lifting accessories, electrical products, navigation equipment, and marine consumables for offshore support vessels.",
+      "A leading Saudi marine and offshore services provider with extensive experience in the oil and gas sector. Zamil Offshore provides offshore vessel operations, marine construction, shipyard, repair, and port-related services. Its operations support a wide range of offshore projects across the Arabian Gulf.",
   },
   {
     name: "Rawabi Vallianz Offshore Services", logo: "/images/clients/rawabi.jpg", description:
-      "Providing comprehensive offshore services for marine operations and industrial projects.",
+      "Rawabi Vallianz Offshore Services (RVOS) is a Saudi-based offshore marine services company and a joint venture between Rawabi Holding and Vallianz Holdings. It provides offshore engineering, construction, vessel chartering, subsea operations, and ship management services. Its fleet and technical capabilities support offshore oil and gas projects in the region and internationally.",
   },
   {
     name: "GAC", logo: "/images/clients/gac.png", description:
-      "Offering integrated marine solutions for the global shipping and offshore industries.",
+      "GAC is a global provider of shipping, logistics, and marine services, with an established presence in Saudi Arabia. Its services include ship agency, vessel husbandry, marine support, launch services, and contract logistics. Through its network across major Saudi ports, GAC supports shipowners, operators, and businesses with integrated maritime solutions.",
   },
   {
     name: "Seacor Marine", logo: "/images/clients/seacor.webp", description:
-      "Delivering innovative marine equipment and services for various maritime applications.",
+      "SEACOR Marine is an international provider of marine transportation and offshore support services for the energy industry. It operates a diverse fleet of offshore support vessels serving oil and gas operations and offshore wind projects. Its services include crew transportation, platform supply, accommodation, and maintenance support, with a strong focus on safety and operational reliability.",
   },
   {
-    name: "zaki", logo: "/images/clients/zaki.png", description:
-      "Supplying high-quality marine products and equipment for diverse industrial needs.",
+    name: "Zaki Al Zayer", logo: "/images/clients/zaki.png", description:
+      "Zaki Al Zayer Marine Services is a marine and offshore services provider with a longstanding presence in the maritime industry. Its capabilities include vessel ownership and chartering, offshore support, vessel management, and marine engineering. The company supports offshore and oil industry operations through a diverse fleet of marine vessels and specialized services.",
   },
   {
     name: "Astro", logo: "/images/clients/astro.jpg", description:
-      "Providing reliable marine services and equipment for offshore and coastal operations.",
+      "Astro Offshore is an international offshore marine services operator serving the oil and gas and offshore construction industries. Its fleet includes anchor handling tugs, ocean-going tugs, workboats, multipurpose support vessels, and barges. The company supports offshore transportation, construction, drilling, and marine operations across several regions.",
   }
 ];
 
